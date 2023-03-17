@@ -13,7 +13,14 @@
         android:theme="@style/Theme.FitConnect"
         tools:targetApi="31">
         <activity
-            android:name=".OTPActivity"
+            android:name=".login.PhoneLoginActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".login.OTPActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

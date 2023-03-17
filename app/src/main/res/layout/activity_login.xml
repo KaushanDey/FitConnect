@@ -1,70 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".login.LoginActivity"
-        android:orientation="vertical">
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".login.LoginActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome"/>
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bold"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="@color/logo_color"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tvWelDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/regular"
+            android:text="So, how would you like to Login?"
+            android:textAlignment="center"
+            android:textColor="#EBAD21"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/tvUsePh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+
+            android:clickable="true"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="Use Phone Number"
+            android:textAlignment="center"
+            android:textColor="#FFCA52"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tvOR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/regular"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:text="OR"
+
+            android:textAlignment="center"
+            android:textColor="#FFCA52"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            
-            <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGoogle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:textColor="@android:color/white" />
+
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:padding="8dp">
-                
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"/>
-                
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:padding="8dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-            
-            
-        </LinearLayout>
-        
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send OTP"/>
-
-        <ProgressBar
-            android:id="@+id/phoneProgressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint=""
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Or Login with"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/regular"
+                android:padding="10dp"
+                android:paddingLeft="-10dp"
+                android:text="Google Login"
+                android:textColor="@color/logo_color"
+                android:textSize="30sp" />
 
         </LinearLayout>
+
+    </LinearLayout>
+
 </layout>
